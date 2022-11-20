@@ -1,0 +1,86 @@
+.AboutBlock {
+    width: 100%;
+}
+
+.ab {
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+        background: #F7F7F7;
+        border-radius: 0px 377px 377px 0px;
+        padding: 3rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 28px;
+    }
+
+    &__title {
+        font-family: 'Federo';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 45px;
+        line-height: 50px;
+        letter-spacing: 0.02em;
+        color: #3A3A3A;
+    }
+
+    &__text {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 26px;
+        display: flex;
+        align-items: center;
+        color: #727272;
+    }
+
+    &__button {
+        background: #434343;
+        padding: 8px 16px;
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: center;
+        letter-spacing: -0.035em;
+        color: #FFFFFF;
+    }
+
+    &__image {
+
+
+
+        width: 523px;
+        height: 523px;
+
+        &Wrapper {
+            border-radius: 50%;
+            box-shadow: 0px 0px 34px 4px rgba(86, 86, 86, 0.1);
+            background: #FFFFFF;
+            width: 523px;
+            height: 523px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 3rem;
+
+            & img {
+                width: 80%;
+                height: 80%;
+            }
+        }
+    }
+}

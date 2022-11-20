@@ -1,0 +1,116 @@
+.footer {
+    width: 100%;
+
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+.ft {
+    height: 428px;
+    background: linear-gradient(96.79deg, rgba(98, 73, 28, 0.4) 44.68%, rgba(49, 32, 2, 0) 85.21%), url('https://sun2-9.userapi.com/impg/Lh_XGjJtjrhunNrVlUb264lpMVQuRRCh35STAQ/xdlmMiFGYtY.jpg?size=1280x720&quality=95&sign=2bc0213fb96840c58d4147d676e02e9c&type=album');
+
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    &_contact {
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    &__text {
+        font-family: 'Museo Sans Cyrl';
+        font-size: 18px;
+        line-height: 22px;
+
+        color: #FFFFFF;
+    }
+
+    &__control {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: 100%;
+        max-height: 70px;
+        overflow: hidden;
+    }
+
+    &__input {
+        background: #FFFFFF;
+        box-shadow: 0px 4px 20px rgba(66, 66, 66, 0.3);
+        border-radius: 10px;
+        width: 100%;
+        margin-right: 27px;
+        height: 100%;
+        padding: 25px 40px;
+    }
+
+    &__send {
+        padding: 15px 25px;
+        background: #CFA55B;
+        box-shadow: 0px 4px 60px rgba(255, 194, 86, 0.4);
+        border-radius: 10px;
+        font-family: 'Museo Sans Cyrl';
+        font-size: 18px;
+        line-height: 22px;
+        color: #FFFFFF;
+        width: fit-content;
+        height: fit-content;
+    }
+
+
+}
+
+.fb {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 120px;
+    background-color: white;
+
+
+    &__map {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        font-family: 'Museo Sans Cyrl';
+        font-size: 14px;
+        line-height: 17px;
+        color: #424242;
+        width: 50%;
+    }
+
+    &__phone {
+        font-family: 'Museo Sans Cyrl';
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: uppercase;
+        width: 50%;
+        color: #424242;
+    }
+}
