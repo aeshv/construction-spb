@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .title {
@@ -29,6 +30,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: grab    ;
 
     &__header {
         width: 100%;
@@ -56,6 +58,7 @@
         align-items: center;
         justify-content: center;
         gap: 128px;
+        min-height: 466px;
     }
 }
 
@@ -79,6 +82,7 @@
         background: linear-gradient(0deg, rgba(207, 165, 91, 0.2), rgba(207, 165, 91, 0.2));
         box-shadow: 0px 5px 50px rgba(60, 60, 60, 0.4);
         border-radius: 10px;
+        user-select: none;
 
         & img {
             width: 100%;
@@ -102,6 +106,7 @@
         line-height: 36px;
         text-transform: uppercase;
         color: #454545;
+        user-select: none;
     }
 
     &__list {
@@ -112,6 +117,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         gap: 30px;
+        user-select: none;
     }
 
     &__item {
@@ -122,6 +128,7 @@
         margin-left: 25px;
         position: relative;
         font-weight: 400;
+        user-select: none;
 
         & b {
             color: #CFA55B;
@@ -136,6 +143,7 @@
             top: 2px;
             left: -25px;
             background: cyan;
+            user-select: none;
         }
     }
 
@@ -166,4 +174,25 @@
     &:hover {
         opacity: 0.8;
     }
+}
+
+.tutorial{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(60, 60, 60, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.hide {
+    display: none;
 }
