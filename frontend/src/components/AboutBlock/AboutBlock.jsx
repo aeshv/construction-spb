@@ -14,7 +14,7 @@ const AboutBlock = () => {
 
                     <div className="ab__image">
                         <div className="ab__imageWrapper">
-                            <img src="https://sun2-9.userapi.com/impg/mMT5AGMz6REKJcdwI598psQa5nEzAbUQnmcZZw/2cVxmP84o6I.jpg?size=1280x1280&quality=95&sign=402b65ae341a54aab45dd7de2883b627&type=album" alt="Логотип компании" />
+                            <img src="http://placeimg.com/600/600/animals" alt="Логотип компании" />
                         </div>
                     </div>
                 </div>

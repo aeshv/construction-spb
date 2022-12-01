@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./BenefitsBlock.scss";
 import { useSwipeable } from "react-swipeable";
 import { motion, useInView } from "framer-motion";
+import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md'
 
 const BenefitsBlock = () => {
   const [active, setActive] = useState(1);
@@ -111,17 +112,17 @@ const BenefitsBlock = () => {
                     </ul>
 
                     <div className="content__control">
-                      <button className="prev">prev</button>
+                     <button className="prev" onClick={()=>changeCurrentActive("minus")}><MdKeyboardArrowLeft/></button>
                       <button className="gold">
                         Получите превью предложения
                       </button>
-                      <button className="next">next</button>
+                      <button className="next" onClick={()=>changeCurrentActive("plus")}><MdKeyboardArrowRight/></button>
                     </div>
                   </div>
                 </div>
                 <div className="slide__image">
                   <img
-                    src="https://i.pinimg.com/564x/66/b3/b9/66b3b9acf91c7b0102837eddf84f2fad.jpg"
+                    src="http://placeimg.com/900/1000/animals"
                     alt="Здание"
                   />
                 </div>
@@ -164,17 +165,17 @@ const BenefitsBlock = () => {
                     </ul>
 
                     <div className="content__control">
-                      <button className="prev">prev</button>
+                     <button className="prev" onClick={()=>changeCurrentActive("minus")}><MdKeyboardArrowLeft/></button>
                       <button className="gold">
                         Получите превью предложения
                       </button>
-                      <button className="next">next</button>
+                      <button className="next" onClick={()=>changeCurrentActive("plus")}><MdKeyboardArrowRight/></button>
                     </div>
                   </div>
                 </div>
                 <div className="slide__image">
                   <img
-                    src="https://i.pinimg.com/564x/66/b3/b9/66b3b9acf91c7b0102837eddf84f2fad.jpg"
+                    src="http://placeimg.com/900/900/animals"
                     alt="Здание"
                   />
                 </div>
@@ -217,17 +218,17 @@ const BenefitsBlock = () => {
                     </ul>
 
                     <div className="content__control">
-                      <button className="prev">prev</button>
+                     <button className="prev" onClick={()=>changeCurrentActive("minus")}><MdKeyboardArrowLeft/></button>
                       <button className="gold">
                         Получите превью предложения
                       </button>
-                      <button className="next">next</button>
+                      <button className="next" onClick={()=>changeCurrentActive("plus")} style={{opacity: active === 3 ? '0.2' : '1'}}><MdKeyboardArrowRight/></button>
                     </div>
                   </div>
                 </div>
                 <div className="slide__image">
                   <img
-                    src="https://i.pinimg.com/564x/66/b3/b9/66b3b9acf91c7b0102837eddf84f2fad.jpg"
+                    src="http://placeimg.com/1000/900/animals"
                     alt="Здание"
                   />
                 </div>
