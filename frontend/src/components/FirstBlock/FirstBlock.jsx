@@ -7,14 +7,12 @@ const FirstBlock = () => {
     <>
       <div className="FB">
         <div className="FB__wrapper">
-          <div className="FB__background">
-            <img src="http://placeimg.com/1600/600/animals" alt="" style={{opacity: '0.2'}}/>
-          </div>
-          <div className="FB__body">
-            <div className="content">
-              <h1 className="content__title">Готовые решения для жизни</h1>
 
-              <div className="content__benefits">
+          <div className="FB__body">
+            <div className="FBcontent">
+              <h1 className="FBcontent__title">Готовые решения для жизни</h1>
+
+              <div className="FBcontent__benefits">
                 <div className="benefits">
                   <h3 className="benefits__title">100 000 000 p</h3>
                   <div className="benefits__description">Цена объекта</div>
@@ -36,7 +34,7 @@ const FirstBlock = () => {
                 </div>
               </div>
 
-              <div className="content__tags">
+              <div className="FBcontent__tags">
                 <div className="tags">
                   <div className="tags__item">
                     <a href="#" className="tags__link">
@@ -64,6 +62,9 @@ const FirstBlock = () => {
           </div>
           <div className="FB__scrollToMore">
             <span><MdExpandMore/>Подробнее об объекте </span>
+          </div>
+          <div className="FB__background">
+            <div className=""  id="animatedBackground"></div>
           </div>
         </div>
       </div>

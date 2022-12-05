@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import "./BenefitsBlock.scss";
 import { useSwipeable } from "react-swipeable";
 import { motion, useInView } from "framer-motion";
-import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from 'react-icons/md'
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import Spacer from "./../UI/Spacer/Spacer";
 
 const BenefitsBlock = () => {
   const [active, setActive] = useState(1);
@@ -71,6 +72,7 @@ const BenefitsBlock = () => {
           <h2 className="title__text">
             Почему мы продаем дорого и делаем это в <b>2 раза быстрее</b>
           </h2>
+          <Spacer type="md" />
         </div>
 
         <div className="swiper">
@@ -91,7 +93,13 @@ const BenefitsBlock = () => {
                       Собственная база покупателей
                     </div>
 
-                    <ul className="content__list">
+                    <motion.ul
+                      className="content__list"
+                      initial={{ opacity: 0, x: -100 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.5 }}
+                    >
                       <li className="content__item">
                         <span>
                           <b>Создаем спрос</b> на объект еще до размещения его в
@@ -109,14 +117,24 @@ const BenefitsBlock = () => {
                           <b>6000</b>
                         </span>
                       </li>
-                    </ul>
+                    </motion.ul>
 
                     <div className="content__control">
-                     <button className="prev" onClick={()=>changeCurrentActive("minus")}><MdKeyboardArrowLeft/></button>
+                      <button
+                        className="prev"
+                        onClick={() => changeCurrentActive("minus")}
+                      >
+                        <MdKeyboardArrowLeft />
+                      </button>
                       <button className="gold">
                         Получите превью предложения
                       </button>
-                      <button className="next" onClick={()=>changeCurrentActive("plus")}><MdKeyboardArrowRight/></button>
+                      <button
+                        className="next"
+                        onClick={() => changeCurrentActive("plus")}
+                      >
+                        <MdKeyboardArrowRight />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -144,7 +162,11 @@ const BenefitsBlock = () => {
                       2Собственная база покупателей
                     </div>
 
-                    <ul className="content__list">
+                    <motion.ul
+                      className="content__list"
+                      initial={{ opacity: 0, x: -100 }}
+                      animate={{ opacity: 1, x: 0 }}
+                    >
                       <li className="content__item">
                         <span>
                           <b>С2здаем спрос</b> на объект еще до размещения его в
@@ -162,22 +184,29 @@ const BenefitsBlock = () => {
                           <b>6000</b>
                         </span>
                       </li>
-                    </ul>
+                    </motion.ul>
 
                     <div className="content__control">
-                     <button className="prev" onClick={()=>changeCurrentActive("minus")}><MdKeyboardArrowLeft/></button>
+                      <button
+                        className="prev"
+                        onClick={() => changeCurrentActive("minus")}
+                      >
+                        <MdKeyboardArrowLeft />
+                      </button>
                       <button className="gold">
                         Получите превью предложения
                       </button>
-                      <button className="next" onClick={()=>changeCurrentActive("plus")}><MdKeyboardArrowRight/></button>
+                      <button
+                        className="next"
+                        onClick={() => changeCurrentActive("plus")}
+                      >
+                        <MdKeyboardArrowRight />
+                      </button>
                     </div>
                   </div>
                 </div>
                 <div className="slide__image">
-                  <img
-                    src="http://placeimg.com/900/900/animals"
-                    alt="Здание"
-                  />
+                  <img src="http://placeimg.com/900/900/animals" alt="Здание" />
                 </div>
               </motion.div>
             )}
@@ -197,7 +226,11 @@ const BenefitsBlock = () => {
                       Собс3твенная база покупателей
                     </div>
 
-                    <ul className="content__list">
+                    <motion.ul
+                      className="content__list"
+                      initial={{ opacity: 0, x: -100 }}
+                      animate={{ opacity: 1, x: 0 }}
+                    >
                       <li className="content__item">
                         <span>
                           <b>Соз3даем спрос</b> на объект еще до размещения его
@@ -215,14 +248,25 @@ const BenefitsBlock = () => {
                           <b>6000</b>
                         </span>
                       </li>
-                    </ul>
+                    </motion.ul>
 
                     <div className="content__control">
-                     <button className="prev" onClick={()=>changeCurrentActive("minus")}><MdKeyboardArrowLeft/></button>
+                      <button
+                        className="prev"
+                        onClick={() => changeCurrentActive("minus")}
+                      >
+                        <MdKeyboardArrowLeft />
+                      </button>
                       <button className="gold">
                         Получите превью предложения
                       </button>
-                      <button className="next" onClick={()=>changeCurrentActive("plus")} style={{opacity: active === 3 ? '0.2' : '1'}}><MdKeyboardArrowRight/></button>
+                      <button
+                        className="next"
+                        onClick={() => changeCurrentActive("plus")}
+                        style={{ opacity: active === 3 ? "0.2" : "1" }}
+                      >
+                        <MdKeyboardArrowRight />
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -238,32 +282,30 @@ const BenefitsBlock = () => {
         </div>
 
         {isTutorial && (
-        <motion.div
-          ref={tutorialRef}
-          className="tutorial"
-          
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1}}
-          exit={{ rotate: 0 }}
-          
-          transition={{ duration: 1.5 }}
-        >
           <motion.div
-            initial={{ rotate: 90 }}
-            animate={{ rotate: 0 }}
+            ref={tutorialRef}
+            className="tutorial"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ rotate: 0 }}
-            transition={{ duration: 1.5, delay: 1 }}
-            className="tutorial__icon"
+            transition={{ duration: 1.5 }}
           >
-            <motion.img
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              src="https://cdn-icons-png.flaticon.com/512/4603/4603384.png"
-              alt="swipe to see full content"
-            />
+            <motion.div
+              initial={{ rotate: 90 }}
+              animate={{ rotate: 0 }}
+              exit={{ rotate: 0 }}
+              transition={{ duration: 1.5, delay: 1 }}
+              className="tutorial__icon"
+            >
+              <motion.img
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                src="https://cdn-icons-png.flaticon.com/512/4603/4603384.png"
+                alt="swipe to see full content"
+              />
+            </motion.div>
           </motion.div>
-        </motion.div>
-        )} 
+        )}
       </div>
     </>
   );
