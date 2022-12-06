@@ -102,7 +102,10 @@ const ImagesGallery = () => {
           <nav>
             <ul>
               {tabs.map((item) => (
-                <li
+                <motion.li
+                initial={{ opacity: 0.6, y: 10 }}
+                whileInView={{ opacity: [0.6, 1], y: 0 }}
+                transition={{ duration: 0.2 }}
                   key={item}
                   className={item === selectedTab ? "selected" : ""}
                   onClick={() => {
@@ -115,7 +118,7 @@ const ImagesGallery = () => {
                   {item === selectedTab ? (
                     <motion.div className="underline" layoutId="underline" />
                   ) : null}
-                </li>
+                </motion.li>
               ))}
             </ul>
           </nav>
@@ -138,7 +141,10 @@ const ImagesGallery = () => {
                             return loading ? (
                               placeholder
                             ) : (
-                              <img
+                              <motion.img
+                                initial={{ opacity: 0.7 }}
+                                whileInView={{ opacity: [0.7, 1] }}
+                                transition={{ duration: 0.5 }}
                                 className="IG__image"
                                 src={src}
                                 onClick={() => openImageViewer(index)}
