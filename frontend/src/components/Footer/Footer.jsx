@@ -42,6 +42,7 @@ const Footer = () => {
                         "https://jsonplaceholder.typicode.com/posts",
                         values
                       )
+                      .catch((error)=> console.warn(error))
                       .then((response) => console.log("response - ", response));
                   }}
                 >
@@ -51,7 +52,7 @@ const Footer = () => {
                       {errors.username && touched.username ? (
                         <div className="ft__error">{errors.username}</div>
                       ) : null}
-                      
+
                       <Field name="phone" className="ft__input"  placeholder="Номер телефона"/>
                       {errors.phone && touched.phone ? (
                         <div className="ft__error">{errors.phone}</div>

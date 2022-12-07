@@ -41,9 +41,9 @@ const FirstBlock = () => {
                       Дома и пристройки
                     </a>
                   </div>
-                  <div className="tags__item">
+                  <div className="tags__item hide-pc">
                     <a href="#" className="tags__link">
-                      Навесы и беседки
+                     Беседки
                     </a>
                   </div>
                   <div className="tags__item">
@@ -56,12 +56,37 @@ const FirstBlock = () => {
                       Гаражи и заборы
                     </a>
                   </div>
+                  <div className="tags__item">
+                    <a href="#" className="tags__link">
+                      Дома и пристройки
+                    </a>
+                  </div>
+                  <div className="tags__item  hide-pc">
+                    <a href="#" className="tags__link">
+                      Навесы
+                    </a>
+                  </div>
+                  <div className="tags__item  hide-pc">
+                    <a href="#" className="tags__link">
+                      Бани
+                    </a>
+                  </div>
+                  <div className="tags__item  hide-pc">
+                    <a href="#" className="tags__link">
+                      Сауны
+                    </a>
+                  </div>
+                  <div className="tags__item  hide-pc">
+                    <a href="#" className="tags__link">
+                      Заборы
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="FB__scrollToMore">
-            <span><MdExpandMore/>Подробнее об объекте </span>
+            <span><MdExpandMore/>Листайте ниже</span>
           </div>
           <div className="FB__background">
             <div className=""  id="animatedBackground"></div>

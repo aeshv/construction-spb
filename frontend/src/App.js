@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Header/>
       <FirstBlock/>
-      <Spacer type="xl"/>
+      <Spacer type="xxl"/>
       <BenefitsBlock/>
       <Spacer type="xl"/>
       <ImagesGallery/>

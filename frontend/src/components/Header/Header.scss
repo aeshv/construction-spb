@@ -12,12 +12,16 @@
     Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   line-height: 24px;
   position: fixed;
   top: 0px;
   max-width: 1920px;
   margin: 0 auto;
   z-index: 999;
+  padding: 0 36px;
 
   &-top,
   &-bottom {
@@ -28,16 +32,26 @@
     width: 100%;
   }
 
-  &__contacts,
   &__social,
-  &__list,
   &__logo,
+  &__list,
+  &__contacts,
   &__menu {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
+  }
+
+  &__social,
+  &__logo {
+    width: fit-content;
+  }
+
+  &__contacts,
+  &__menu {
+    justify-content: flex-end;
   }
 
   &__social {
@@ -99,12 +113,13 @@
       color: #151515;
       cursor: pointer;
       display: inline-block;
-      font-size: .875rem;
+      font-size: 0.875rem;
       font-weight: 700;
       line-height: 1;
       padding: 1rem 1.375rem;
       text-align: center;
-      transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
       -webkit-user-select: none;
       -moz-user-select: none;
       user-select: none;
@@ -114,8 +129,79 @@
       color: #000;
     }
   }
-  
+
   &__list {
     gap: 16px;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .header {
+    padding: 0 16px;
+
+    &__social {
+      gap: 8px;
+      display: none;
+
+      &--item {
+        width: 24px;
+        height: 24px;
+        font-size: 10px;
+      }
+    }
+
+    &__contacts {
+      gap: 16px;
+
+      display: grid;
+
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      grid-template-areas:
+        "label1 label1 label0"
+        "label2 label2 label0";
+
+      gap: 0px;
+    }
+
+    & .contacts {
+      &__email {
+        font-weight: 600;
+        grid-area: label1;
+      }
+
+      &__number {
+        flex-direction: column;
+        justify-self: flex-start;
+        grid-area: label2;
+        & span {
+          display: none;
+        }
+      }
+
+      &__button {
+        padding: 8px;
+        grid-area: label0;
+      }
+    }
+
+    &__logo {
+      display: none;
+    }
+
+    &__menu {
+      padding: 6px 0 0 0;
+    }
+
+    &__list {
+      gap: 5px;
+      justify-content: space-between;
+
+      &--item {
+        text-align: center;
+      }
+    }
   }
 }

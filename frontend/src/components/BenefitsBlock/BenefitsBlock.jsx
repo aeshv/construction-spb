@@ -96,9 +96,9 @@ const BenefitsBlock = () => {
                       <AnimatePresence>
                         <motion.ul
                           className="content__list"
-                          initial={{ opacity: 0}}
-                          animate={{ opacity: 1}}
-                          exit={{ opacity: 0}}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
                           transition={{ duration: 0.5 }}
                         >
                           <li className="content__item">
@@ -127,9 +127,9 @@ const BenefitsBlock = () => {
                       <AnimatePresence>
                         <motion.ul
                           className="content__list"
-                          initial={{ opacity: 0}}
-                          animate={{ opacity: 1}}
-                          exit={{ opacity: 0}}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
                           transition={{ duration: 0.5 }}
                         >
                           <li className="content__item">
@@ -158,9 +158,9 @@ const BenefitsBlock = () => {
                       <AnimatePresence>
                         <motion.ul
                           className="content__list"
-                          initial={{ opacity: 0}}
-                          animate={{ opacity: 1}}
-                          exit={{ opacity: 0}}
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
                           transition={{ duration: 0.5 }}
                         >
                           <li className="content__item">
@@ -242,6 +242,8 @@ const BenefitsBlock = () => {
 
         {isTutorial && (
           <motion.div
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
             ref={tutorialRef}
             className="tutorial"
             initial={{ opacity: 0 }}

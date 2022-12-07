@@ -8,13 +8,15 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: flex-end;
         gap: 50px;
-        background: #F7F7F7;
+        background: rgba(#f0cb86, 0.6);
         border-radius: 0px 377px 377px 0px;
         padding: 3rem;
     }
 
     &__content {
+        max-width: 720px;
         display: flex;
         flex-direction: column;
         align-items: center;

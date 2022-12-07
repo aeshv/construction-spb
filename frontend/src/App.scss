@@ -1,3 +1,8 @@
 $base-color: #c6538c;
 $border-dark: rgba($base-color, 0.88);
 
+@media screen and (min-width: 900px) {
+  .hide-pc {
+    display: none;
+  }
+}
