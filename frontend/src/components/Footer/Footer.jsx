@@ -38,27 +38,40 @@ const Footer = () => {
                   validationSchema={SignupSchema}
                   onSubmit={(values) => {
                     axios
-                      .post(
-                        "https://jsonplaceholder.typicode.com/posts",
-                        values
-                      )
-                      .catch((error)=> console.warn(error))
+                      .get(process.env.REACT_APP_API, {
+                        params: {
+                          ...values
+                        }
+                      })
+                      .catch((error) => console.warn(error))
                       .then((response) => console.log("response - ", response));
                   }}
                 >
                   {({ errors, touched }) => (
                     <Form>
-                      <Field name="username" className="ft__input" placeholder="Ваше имя"/>
+                      <Field
+                        name="username"
+                        className="ft__input"
+                        placeholder="Ваше имя"
+                      />
                       {errors.username && touched.username ? (
                         <div className="ft__error">{errors.username}</div>
                       ) : null}
 
-                      <Field name="phone" className="ft__input"  placeholder="Номер телефона"/>
+                      <Field
+                        name="phone"
+                        className="ft__input"
+                        placeholder="Номер телефона"
+                      />
                       {errors.phone && touched.phone ? (
                         <div className="ft__error">{errors.phone}</div>
                       ) : null}
 
-                      <Field name="content" className="ft__input"  placeholder="Ваше сообщение"/>
+                      <Field
+                        name="content"
+                        className="ft__input"
+                        placeholder="Ваше сообщение"
+                      />
                       {errors.content && touched.content ? (
                         <div className="ft__error">{errors.content}</div>
                       ) : null}
