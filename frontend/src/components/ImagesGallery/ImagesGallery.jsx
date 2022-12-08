@@ -49,6 +49,7 @@ const ImagesGallery = () => {
 
   const placeholder = (
     <div
+      className="placeholder"
       style={{
         width: "255px",
         height: "255px",
