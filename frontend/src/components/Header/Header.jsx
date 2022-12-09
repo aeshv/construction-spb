@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import images from "../../assets/images";
 import "./Header.scss";
 
 const Header = () => {
@@ -24,7 +25,10 @@ const Header = () => {
         </div>
 
         <div className="header-bottom">
-          <div className="header__logo">LOGO</div>
+          <div className="header__logo">
+          {/* <img src={images.logo192} alt="Логотип Компании"/> */}
+          <></>
+          </div>
           <div className="header__menu">
             <nav className="header__list">
               <a href="#benefits" className="header__list--item">

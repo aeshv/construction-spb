@@ -9,6 +9,10 @@
         justify-content: center;
     }
 
+    &__top {
+        width: 100%;
+    }
+
     &__bottom {
         width: 100%;
         display: flex;
@@ -19,7 +23,7 @@
 }
 
 .ft {
-    // height: 428px;
+    min-height: 620px;
     background: linear-gradient(96.79deg, rgba(98, 73, 28, 0.4) 44.68%, rgba(49, 32, 2, 0) 85.21%), url('https://sun2-9.userapi.com/impg/Lh_XGjJtjrhunNrVlUb264lpMVQuRRCh35STAQ/xdlmMiFGYtY.jpg?size=1280x720&quality=95&sign=2bc0213fb96840c58d4147d676e02e9c&type=album');
     padding: 24px 16px;
     width: 100%;
@@ -27,6 +31,16 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+
+    &__row {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
 
     &_contact {
         width: 75%;
@@ -41,8 +55,9 @@
         font-family: 'Roboto';
         font-size: 18px;
         line-height: 22px;
-
+        max-width: 650px;
         color: #FFFFFF;
+        backdrop-filter: drop-shadow(2px 4px 6px black);
     }
 
     &__control {
@@ -70,8 +85,11 @@
         font-family: 'Roboto';
         font-size: 18px;
         line-height: 22px;
-
-        color: #fff4f4;
+        font-weight: 100;
+        position: absolute;
+        bottom: 16px;
+        right: 1rem;
+        color: #e26464;
     }
 
     &__input {
@@ -98,6 +116,7 @@
         height: fit-content;
         transition: all 0.2s;
         border: 1px solid rgba(255, 194, 86, 0.0);
+        cursor: pointer;
 
         &:hover {
             border: 1px solid rgba(255, 194, 86, 0.8);
@@ -166,6 +185,12 @@
             & form {
 
             }
+        }
+
+        &__error {
+            font-size: 12px;
+            opacity: 0.8;
+            bottom: 5px;
         }
 
         &__input {

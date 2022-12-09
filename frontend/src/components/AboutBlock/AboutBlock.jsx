@@ -9,7 +9,7 @@ const AboutBlock = () => {
                     <div className="ab__content">
                         <h3 className="ab__title">СПБ ГРУП СТРОЙ</h3>
                         <p className="ab__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget hendrerit odio, non ultrices lorem. Donec vel vestibulum eros. Curabitur fringilla arcu varius.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget hendrerit odio, non ultrices lorem. Donec vel vestibulum eros. Curabitur fringilla arcu varius.</p>
-                        <button type="button" className='ab__button'>Узнать стоимость</button>
+                        <a href='/#contact' className='ab__button' >Узнать стоимость</a>
                     </div>
 
                     <div className="ab__image">
