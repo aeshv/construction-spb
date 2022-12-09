@@ -1,169 +1,393 @@
 .BenefitsBlock {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 
-.title {
+  & .title {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
 
     &__text {
-        font-family: 'Roboto';
-        font-size: 36px;
-        line-height: 43px;
-        text-align: center;
+      font-family: "Roboto";
+      font-size: 36px;
+      line-height: 43px;
+      text-align: center;
+      max-width: 600px;
 
-        color: #424242;
+      color: #424242;
     }
+  }
 }
 
 .swiper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
 
-    &__header {
-        width: 100%;
-        max-width: 1280px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 900;
-        font-size: 96px;
-        line-height: 112px;
-        text-transform: uppercase;
-        color: #CFA55B;
-        opacity: 0.3;
-
-        margin-bottom: 15px;
-    }
-
-    &__body {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 128px;
-    }
-}
-
-
-.slide {
+  &__header {
     width: 100%;
     max-width: 1280px;
-    padding: 20px 30px;
-    // background-color: rgba($color: #000000, $alpha: 0.2);
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: flex-start;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 96px;
+    line-height: 112px;
+    text-transform: uppercase;
+    color: #cfa55b;
+    opacity: 0.3;
+
+    margin-bottom: 15px;
+  }
+
+  &__body {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 128px;
+    min-height: 466px;
+  }
+}
+
+.slide {
+  width: 100%;
+  max-width: 1280px;
+  padding: 20px 30px;
+  // background-color: rgba($color: #000000, $alpha: 0.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    max-width: 410px;
+    max-height: 360px;
+    overflow: hidden;
+    background: linear-gradient(
+      0deg,
+      rgba(207, 165, 91, 0.2),
+      rgba(207, 165, 91, 0.2)
+    );
+    box-shadow: 0px 5px 50px rgba(60, 60, 60, 0.4);
+    border-radius: 10px;
+    user-select: none;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      user-select: none;
+    }
+  }
+}
+
+.gold {
+  background: #cfa55b;
+  box-shadow: 0px 20px 40px rgba(207, 165, 91, 0.4);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 60px;
+
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: #ffffff;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.tutorial {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(60, 60, 60, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  & svg {
+    width: 50px;
+    height: 50px;
+    color: rgba(60, 60, 60, 0.4);
+  }
+
+  &:hover {
+    & svg {
+      color: rgba(60, 60, 60, 0.6);
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+
+  .BenefitsBlock {
+    & .title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+  
+      &__text {
+
+        font-size: 36px;
+        line-height: 43px;
+        text-align: center;
+        max-width: 400px;
+      }
+    }
+  }
+
+  .swiper {
+    &__header {
+      display: none;
+    }
+  }
+
+  .slide {
+    width: 100%;
+    min-height: 753px;
+    max-height: 754px;
+    max-width: 720px;
+    padding: 24px 16px;
+    // background-color: rgba($color: #000000, $alpha: 0.2);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
     justify-content: space-between;
+    gap: 40px;
 
     &__image {
-        // width: 649px;
-        // height: 389px;
-        max-width: 649px;
-        max-height: 389px;
-        overflow: hidden;
-        background: linear-gradient(0deg, rgba(207, 165, 91, 0.2), rgba(207, 165, 91, 0.2));
-        box-shadow: 0px 5px 50px rgba(60, 60, 60, 0.4);
-        border-radius: 10px;
+      width: 360px;
+      height: 360px;
 
-        & img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
+      overflow: hidden;
+      background: linear-gradient(
+        0deg,
+        rgba(207, 165, 91, 0.2),
+        rgba(207, 165, 91, 0.2)
+      );
+      box-shadow: 0px 5px 50px rgba(60, 60, 60, 0.4);
+      border-radius: 10px;
+      user-select: none;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
     }
+  }
+
+  .gold {
+    padding: 10px 16px;
+  }
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 40px;
+
+  &__title {
+    font-family: "Roboto";
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #454545;
+    user-select: none;
+    text-align: center;
+  }
+
+  &__list {
+    height: 100%;
+    max-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 40px;
+    gap: 30px;
+    user-select: none;
+  }
+
+  &__item {
+    font-family: "Roboto";
+    font-size: 18px;
+    line-height: 22px;
+    color: #424242;
+    margin-left: 25px;
+    position: relative;
+    font-weight: 400;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+
+    & b {
+      color: #cfa55b;
+      font-weight: 500;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 2px;
+      left: -25px;
+      background: #cfa55b;
+      border-radius: 50%;
+      user-select: none;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        scale: 1.1;
+      }
+    }
+  }
+
+  &__control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+    .BenefitsBlock {
+        & .title {
+            &__text {
+                font-size: 24px;
+                line-height: 110%;
+            }
+        }
+    }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
 
     &__title {
-        font-family: 'Roboto';
-        font-size: 30px;
-        line-height: 36px;
-        text-transform: uppercase;
-        color: #454545;
+      font-family: "Roboto";
+      font-size: 30px;
+      line-height: 36px;
+      text-transform: uppercase;
+      color: #454545;
+      user-select: none;
+      text-align: center;
     }
 
     &__list {
-        height: 100%;
-        max-height: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        gap: 30px;
+      height: 100%;
+      max-height: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 16px;
+      user-select: none;
+      padding: 0 16px;
     }
 
     &__item {
-        font-family: 'Roboto';
-        font-size: 18px;
-        line-height: 22px;
-        color: #424242;
-        margin-left: 25px;
-        position: relative;
-        font-weight: 400;
+      font-family: "Roboto";
+      font-size: 16px;
+      line-height: 22px;
+      color: #424242;
+      margin-left: 25px;
+      position: relative;
+      font-weight: 400;
+      user-select: none;
+      transition: all 0.2s ease-in-out;
 
-        & b {
-            color: #CFA55B;
-            font-weight: 500;
-        }
+      & b {
+        color: #cfa55b;
+        font-weight: 500;
+      }
 
+      &::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 2px;
+        left: -25px;
+        background: #cfa55b;
+        border-radius: 50%;
+        user-select: none;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover {
         &::before {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            top: 2px;
-            left: -25px;
-            background: cyan;
+          scale: 1.1;
         }
+      }
     }
 
     &__control {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
     }
-}
+  }
 
-.gold {
-    background: #CFA55B;
-    box-shadow: 0px 20px 40px rgba(207, 165, 91, 0.4);
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 30px 60px;
+  .slide {
+    min-height: 406px;
 
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    color: #FFFFFF;
-
-    &:hover {
-        opacity: 0.8;
+    &__image {
+        display: none;
     }
+  }
 }

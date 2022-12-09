@@ -1,0 +1,224 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  background-color: rgba(20, 20, 20, 0.7);
+  box-sizing: border-box;
+  color: #fff;
+  font-family: Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue",
+    Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 24px;
+  position: fixed;
+  top: 0px;
+  max-width: 1920px;
+  margin: 0 auto;
+  z-index: 999;
+  padding: 0 36px;
+  backdrop-filter: blur(5px);
+
+  &-top,
+  &-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &-top {
+    & a {
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &-bottom {
+    padding: 10px 0;
+  }
+
+  &__social,
+  &__logo,
+  &__list,
+  &__contacts,
+  &__menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__social,
+  &__logo {
+    width: fit-content;
+  }
+
+  &__contacts,
+  &__menu {
+    justify-content: flex-end;
+  }
+
+  &__social {
+    gap: 16px;
+
+    &--item {
+      border: 1px solid darkgrey;
+      border-radius: 50%;
+      padding: 5px;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        filter: brightness(1.1);
+      }
+    }
+  }
+
+  &__contacts {
+    gap: 24px;
+  }
+  & .contacts {
+    &__email {
+      color: #fff;
+      display: inline-block;
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    &__number {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      & span {
+        color: #777;
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1;
+        margin-bottom: -0.0625rem;
+        margin-right: 0.875rem;
+      }
+
+      & a {
+        color: #fff;
+        display: inline-block;
+        font-size: 0.875rem;
+        font-weight: 700;
+        line-height: 1;
+      }
+    }
+
+    &__button {
+      background-color: transparent;
+      border: 2px solid transparent;
+      border-radius: 0;
+      color: #151515;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 0.875rem;
+      font-weight: 700;
+      line-height: 1;
+      padding: 1rem 1.375rem;
+      text-align: center;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      vertical-align: middle;
+      background-color: #ffd600;
+      border-color: #ffd600;
+      color: #000;
+    }
+  }
+
+  &__list {
+    gap: 16px;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .header {
+    padding: 0 16px;
+
+    &__social {
+      gap: 8px;
+      display: none;
+
+      &--item {
+        width: 24px;
+        height: 24px;
+        font-size: 10px;
+      }
+    }
+
+    &__contacts {
+      gap: 16px;
+
+      display: grid;
+
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      grid-template-areas:
+        "label1 label1 label0"
+        "label2 label2 label0";
+
+      gap: 0px;
+    }
+
+    & .contacts {
+      &__email {
+        font-weight: 600;
+        grid-area: label1;
+      }
+
+      &__number {
+        flex-direction: column;
+        justify-self: flex-start;
+        grid-area: label2;
+        & span {
+          display: none;
+        }
+      }
+
+      &__button {
+        padding: 8px;
+        grid-area: label0;
+      }
+    }
+
+    &__logo {
+      display: none;
+    }
+
+    &__menu {
+      padding: 6px 0 0 0;
+    }
+
+    &__list {
+      gap: 5px;
+      justify-content: space-between;
+
+      &--item {
+        text-align: center;
+      }
+    }
+  }
+}
