@@ -67,7 +67,7 @@ const BenefitsBlock = () => {
 
   return (
     <>
-      <div className="BenefitsBlock">
+      <div className="BenefitsBlock" id='benefits'>
         <div className="title">
           <h2 className="title__text">
             Почему мы продаем дорого и делаем это в <b>2 раза быстрее</b>

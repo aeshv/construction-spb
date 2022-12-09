@@ -14,24 +14,26 @@ const FirstBlock = () => {
 
               <div className="FBcontent__benefits">
                 <div className="benefits">
-                  <h3 className="benefits__title">100 000 000 p</h3>
-                  <div className="benefits__description">Цена объекта</div>
+                  <h3 className="benefits__title">9 000 +</h3>
+                  <div className="benefits__description">Построенных объектов</div>
                 </div>
 
                 <div className="benefits">
-                  <h3 className="benefits__title">100 000 000 p</h3>
-                  <div className="benefits__description">Цена объекта</div>
+                  <h3 className="benefits__title">5 минут</h3>
+                  <div className="benefits__description">Среднее время до звонка</div>
+                </div>
+
+
+                <div className="benefits">
+                  <h3 className="benefits__title">450 000 ₽</h3>
+                  <div className="benefits__description">Средняя цена</div>
                 </div>
 
                 <div className="benefits">
-                  <h3 className="benefits__title">100 000 000 p</h3>
-                  <div className="benefits__description">Цена объекта</div>
+                  <h3 className="benefits__title">750 +</h3>
+                  <div className="benefits__description">Довольных клиентов</div>
                 </div>
 
-                <div className="benefits">
-                  <h3 className="benefits__title">100 000 000 p</h3>
-                  <div className="benefits__description">Цена объекта</div>
-                </div>
               </div>
 
               <div className="FBcontent__tags">

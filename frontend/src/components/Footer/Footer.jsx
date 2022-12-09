@@ -21,7 +21,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="footer__wrapper">
+      <div className="footer__wrapper" id="contact">
         <div className="footer__top">
           <div className="ft">
             <div className="ft_contact">

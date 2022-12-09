@@ -14,12 +14,12 @@ const Header = () => {
           </div>
 
           <div className="header__contacts">
-            <div className="contacts__email">info@spb-stroimgroup.ru</div>
-            <div className="contacts__number">
+            <a className="contacts__email" href="mailto:info@spb-stroimgroup.ru">info@spb-stroimgroup.ru</a>
+            <a className="contacts__number" href="tel:+79099595521">
               <span>Санкт-Петербург</span>
               <a>+7 (909) 959-55-21</a>
-            </div>
-            <div className="contacts__button">Заказать Звонок</div>
+            </a>
+            <a href="#contact" className="contacts__button">Заказать Звонок</a>
           </div>
         </div>
 
@@ -27,18 +27,18 @@ const Header = () => {
           <div className="header__logo">LOGO</div>
           <div className="header__menu">
             <nav className="header__list">
-              <a href="#" className="header__list--item">
-                Дома и пристройки
+              <a href="#benefits" className="header__list--item">
+                Преимущества
               </a>
-              <a href="#" className="header__list--item">
-                Навесы и беседки
+              <a href="#gallery" className="header__list--item">
+                Галерея
               </a>
-              <a href="#" className="header__list--item">
-                Бани и сауны
+              <a href="#about" className="header__list--item">
+                О нас
               </a>
-              <a href="#" className="header__list--item">
+              {/* <a href="#" className="header__list--item">
                 Гаражи и заборы
-              </a>
+              </a> */}
             </nav>
           </div>
         </div>

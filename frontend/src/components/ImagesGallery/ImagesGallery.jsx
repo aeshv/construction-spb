@@ -98,7 +98,7 @@ const ImagesGallery = () => {
   );
   return (
     <>
-      <div className="IG">
+      <div className="IG" id="gallery">
         <div className="IG__wrapper">
           <nav>
             <ul>

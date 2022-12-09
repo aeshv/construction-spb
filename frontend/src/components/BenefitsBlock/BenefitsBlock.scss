@@ -12,12 +12,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 40px;
 
     &__text {
       font-family: "Roboto";
       font-size: 36px;
       line-height: 43px;
       text-align: center;
+      max-width: 600px;
 
       color: #424242;
     }
@@ -75,8 +77,8 @@
   &__image {
     width: 100%;
     height: 100%;
-    max-width: 514px;
-    max-height: 354px;
+    max-width: 410px;
+    max-height: 360px;
     overflow: hidden;
     background: linear-gradient(
       0deg,
@@ -156,6 +158,26 @@
 }
 
 @media screen and (max-width: 920px) {
+
+  .BenefitsBlock {
+    & .title {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+  
+      &__text {
+
+        font-size: 36px;
+        line-height: 43px;
+        text-align: center;
+        max-width: 400px;
+      }
+    }
+  }
+
   .swiper {
     &__header {
       display: none;
@@ -170,14 +192,14 @@
     padding: 24px 16px;
     // background-color: rgba($color: #000000, $alpha: 0.2);
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
     gap: 40px;
 
     &__image {
-      width: auto;
-      height: auto;
+      width: 360px;
+      height: 360px;
 
       overflow: hidden;
       background: linear-gradient(

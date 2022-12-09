@@ -4,7 +4,7 @@ import './AboutBlock.scss'
 const AboutBlock = () => {
     return (
         <>
-            <div className="AboutBlock">
+            <div className="AboutBlock" id='about'>
                 <div className="ab__wrapper">
                     <div className="ab__content">
                         <h3 className="ab__title">СПБ ГРУП СТРОЙ</h3>
