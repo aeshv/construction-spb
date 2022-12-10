@@ -44,15 +44,16 @@ const Footer = () => {
                     validationSchema={SignupSchema}
                     onSubmit={(values) => {
                       axios
-                        .get(process.env.REACT_APP_API, {
+                        .get(`${process.env.REACT_APP_API}/mail`, {
                           params: {
                             ...values,
                           },
                         })
                         .catch((error) => console.warn(error))
-                        .then((response) =>
-                          console.log("response - ", response)
-                        );
+                        .then((response) => {
+                          setIsFormSended(true);
+                          console.log("response - ", response);
+                        });
                     }}
                   >
                     {({ errors, touched }) => (
