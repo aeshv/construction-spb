@@ -3,7 +3,8 @@ import React from "react";
 import "./Header.scss";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { RiTelegramLine } from "react-icons/ri";
-import { SlSocialVkontakte } from 'react-icons/sl'
+import { SlSocialVkontakte } from "react-icons/sl";
+import callYM from "./../../helpers/callYM";
 
 const Header = () => {
   return (
@@ -18,7 +19,7 @@ const Header = () => {
               <RiTelegramLine />
             </div>
             <div className="header__social--item">
-              <SlSocialVkontakte/>
+              <SlSocialVkontakte />
             </div>
           </div>
 
@@ -26,14 +27,29 @@ const Header = () => {
             <a
               className="contacts__email"
               href="mailto:info@spb-stroimgroup.ru"
+              onClick={() => {
+                callYM("header-email");
+              }}
             >
               info@spb-stroimgroup.ru
             </a>
-            <a className="contacts__number" href="tel:+79099595521">
+            <a
+              className="contacts__number"
+              href="tel:+79099595521"
+              onClick={() => {
+                callYM("header-phone");
+              }}
+            >
               <span>Санкт-Петербург</span>
               <a>+7 (909) 959-55-21</a>
             </a>
-            <a href="#contact" className="contacts__button">
+            <a
+              href="#contact"
+              className="contacts__button"
+              onClick={() => {
+                callYM("header-form");
+              }}
+            >
               Заказать Звонок
             </a>
           </div>
@@ -46,7 +62,11 @@ const Header = () => {
           </div>
           <div className="header__menu">
             <nav className="header__list">
-              <a href="#benefits" className="header__list--item">
+              <a
+                href="#benefits"
+                className="header__list--item"
+                onClick={() => callYM("header-anchor")}
+              >
                 Преимущества
               </a>
               <a href="#gallery" className="header__list--item">

@@ -3,6 +3,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import "./Footer.scss";
+import callYM from "./../../helpers/callYM";
 
 const Footer = () => {
   const SignupSchema = Yup.object().shape({
@@ -49,9 +50,13 @@ const Footer = () => {
                             ...values,
                           },
                         })
-                        .catch((error) => console.warn(error))
+                        .catch((error) => {
+                          console.warn(error);
+                          callYM("form-failed");
+                        })
                         .then((response) => {
                           setIsFormSended(true);
+                          callYM("form-success");
                           console.log("response - ", response);
                         });
                     }}
@@ -89,7 +94,13 @@ const Footer = () => {
                             <div className="ft__error">{errors.content}</div>
                           ) : null}
                         </div>
-                        <button type="submit" className="ft__send">
+                        <button
+                          type="submit"
+                          className="ft__send"
+                          onClick={() => {
+                            callYM("form-submit");
+                          }}
+                        >
                           Получить консультацию
                         </button>
                       </Form>

@@ -4,6 +4,7 @@ import { useSwipeable } from "react-swipeable";
 import { AnimatePresence, motion, useInView } from "framer-motion";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 import Spacer from "./../UI/Spacer/Spacer";
+import callYM from "./../../helpers/callYM";
 
 const BenefitsBlock = () => {
   const [active, setActive] = useState(1);
@@ -67,7 +68,7 @@ const BenefitsBlock = () => {
 
   return (
     <>
-      <div className="BenefitsBlock" id='benefits'>
+      <div className="BenefitsBlock" id="benefits">
         <div className="title">
           <h2 className="title__text">
             Почему мы продаем дорого и делаем это в <b>2 раза быстрее</b>
@@ -192,7 +193,12 @@ const BenefitsBlock = () => {
                     >
                       <MdKeyboardArrowLeft />
                     </button>
-                    <button className="gold">
+                    <button
+                      className="gold"
+                      onClick={() => {
+                        callYM("header-form");
+                      }}
+                    >
                       Получите превью предложения
                     </button>
                     <button
