@@ -3,6 +3,7 @@ import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import "./Footer.scss";
+import callYM from "./../../helpers/callYM";
 
 const Footer = () => {
   const SignupSchema = Yup.object().shape({
@@ -44,15 +45,20 @@ const Footer = () => {
                     validationSchema={SignupSchema}
                     onSubmit={(values) => {
                       axios
-                        .get(process.env.REACT_APP_API, {
+                        .get(`${process.env.REACT_APP_API}/mail`, {
                           params: {
                             ...values,
                           },
                         })
-                        .catch((error) => console.warn(error))
-                        .then((response) =>
-                          console.log("response - ", response)
-                        );
+                        .catch((error) => {
+                          console.warn(error);
+                          callYM("form-failed");
+                        })
+                        .then((response) => {
+                          setIsFormSended(true);
+                          callYM("form-success");
+                          console.log("response - ", response);
+                        });
                     }}
                   >
                     {({ errors, touched }) => (
@@ -88,7 +94,13 @@ const Footer = () => {
                             <div className="ft__error">{errors.content}</div>
                           ) : null}
                         </div>
-                        <button type="submit" className="ft__send">
+                        <button
+                          type="submit"
+                          className="ft__send"
+                          onClick={() => {
+                            callYM("form-submit");
+                          }}
+                        >
                           Получить консультацию
                         </button>
                       </Form>
