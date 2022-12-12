@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from "react";
 import "./ImagesGallery.scss";
+import {RxDot} from 'react-icons/rx'
 import { AnimatePresence, motion } from "framer-motion";
 import ImageViewer from "react-simple-image-viewer";
 import ProgressiveImage from "react-progressive-graceful-image";
@@ -44,6 +45,32 @@ const ImagesGallery = () => {
       "http://placeimg.com/900/600/architecture",
       "http://placeimg.com/1200/950/architecture",
       "http://placeimg.com/1200/900/architecture",
+    ],
+  ];
+
+  const IGText = [
+    [
+      "Изготавливаем бани и сауны по каркасной и брусовой технологии.",
+      "Гарантируем качественную установку печей и дымоходов с соблюдением всех норм пожаробезопасности.",
+      "Индивидуальный подход к каждому проекту.",
+      "Подбор интерьерных решений, материала и оборудования.",
+      "Купель или офуро в подарок при комплексной застройке.",
+    ],
+    [
+      "Мы строим дома любой категории – из сухой доски, бруса, клееного бруса, газобетона, кирпича.",
+      "Разновидность стилей – классический, скандинавский, шале, бунгало.",
+      "Преимущество нашей компании – застройка комплексом - дом, гараж или навес, баня и все сопутствующие к ним инженерные сети.",
+      "У нас можно заказать любую пристройку к вашему дому - хозяйственный блок, веранда, терраса или пергола.",
+      "Наши дома соответствуют всем стандартам энергоэффективности  и СНИПам.",
+      "Выполняем заказы по строительству садовых и детских домиков.",
+    ],
+    [
+      "Навесы для машин строим из клееного бруса, что повышает прочность конструкции и придает строению красивый, эстетический вид.",
+      "Можем добавить хозяйственный блок или дополнительное помещение к навесу для  хранения инструмента и вещей.",
+      "Организуем въезд, смонтируем брусчатку, дренаж и ливневку.",
+      "Изготавливаем квадратные, прямоугольные, шестигранные и восьмигранные беседки.",
+      "Гриль беседки и гриль домики, устанавливаем электрику, выполняем отделку, устанавливаем и монтируем мебель.",
+      "Складываем BBQ - комплексы.",
     ],
   ];
 
@@ -104,15 +131,13 @@ const ImagesGallery = () => {
             <ul>
               {tabs.map((item) => (
                 <motion.li
-                initial={{ opacity: 0.6, y: 10 }}
-                whileInView={{ opacity: [0.6, 1], y: 0 }}
-                transition={{ duration: 0.2 }}
+                  initial={{ opacity: 0.6, y: 10 }}
+                  whileInView={{ opacity: [0.6, 1], y: 0 }}
+                  transition={{ duration: 0.2 }}
                   key={item}
                   className={item === selectedTab ? "selected" : ""}
                   onClick={() => {
                     setSelectedTab(item);
-                    console.log(selectedTab);
-                    console.log(tabs[tabs.indexOf(selectedTab)]);
                   }}
                 >
                   {item}
@@ -133,6 +158,16 @@ const ImagesGallery = () => {
                 transition={{ duration: 0.2 }}
                 className="IG__main"
               >
+                <div className="IG__description">
+                  <div className="IG__list-wrapper">
+                  {IGText[tabs.indexOf(selectedTab)].map((textLine, index) => (
+                     <span key={index} className={`IG__line IG__line-${index}`}>
+                      <RxDot/> {textLine}
+                    </span>
+                  ))}
+                  </div>
+                </div>
+
                 <div className="IG__grid">
                   {images[tabs.indexOf(selectedTab)].map(
                     (singleImage, index) => (
@@ -149,7 +184,7 @@ const ImagesGallery = () => {
                                 className="IG__image"
                                 src={src}
                                 onClick={() => openImageViewer(index)}
-                                alt="asdklj"
+                                alt="Наши работы"
                               />
                             );
                           }}

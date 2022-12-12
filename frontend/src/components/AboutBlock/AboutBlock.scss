@@ -37,12 +37,16 @@
   &__text {
     font-family: "Roboto";
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
     line-height: 26px;
-    display: flex;
+    // display: flex;
     align-items: center;
     color: #727272;
+
+    & b {
+      font-weight: 600;
+    }
   }
 
   &__button {
