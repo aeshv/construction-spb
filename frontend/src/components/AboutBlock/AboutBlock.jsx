@@ -25,4 +25,4 @@ const AboutBlock = () => {
     )
 }
 
-export default AboutBlock
+export default AboutBlock;
