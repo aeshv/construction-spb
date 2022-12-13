@@ -5,6 +5,7 @@ import axios from "axios";
 import "./Footer.scss";
 import callYM from "./../../helpers/callYM";
 import { motion } from "framer-motion";
+import Created from "../Created/Created";
 
 const Footer = () => {
   const SignupSchema = Yup.object().shape({
@@ -145,10 +146,18 @@ const Footer = () => {
               610000 г. Киров, ул. Карла Маркса 21, офис 334{" "}
             </div>
             <div className="fb_phone">
-              <span>+7 (999) 999 99 99</span>
+              <a
+                href="tel:+79117990220"
+                onClick={() => {
+                  callYM("footer-phone");
+                }}
+              >
+                +7 (911) 799-02-20
+              </a>
             </div>
           </div>
         </div>
+       <Created/>
       </div>
     </>
   );
