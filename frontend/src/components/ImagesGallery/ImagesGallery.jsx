@@ -1,6 +1,6 @@
 import React, { useCallback, useState } from "react";
 import "./ImagesGallery.scss";
-import {RxDot} from 'react-icons/rx'
+import { RxDot } from "react-icons/rx";
 import { AnimatePresence, motion } from "framer-motion";
 import ImageViewer from "react-simple-image-viewer";
 import ProgressiveImage from "react-progressive-graceful-image";
@@ -78,8 +78,8 @@ const ImagesGallery = () => {
     <div
       className="placeholder"
       style={{
-        width: "255px",
-        height: "255px",
+        width: "150px",
+        height: "150px",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -160,11 +160,20 @@ const ImagesGallery = () => {
               >
                 <div className="IG__description">
                   <div className="IG__list-wrapper">
-                  {IGText[tabs.indexOf(selectedTab)].map((textLine, index) => (
-                     <span key={index} className={`IG__line IG__line-${index}`}>
-                      <RxDot/> {textLine}
-                    </span>
-                  ))}
+                    {IGText[tabs.indexOf(selectedTab)].map(
+                      (textLine, index) => (
+                        <motion.span
+                          initial={{ opacity: 0.5 }}
+                          whileInView={{ opacity: [0.5, 1] }}
+                          transition={{ duration: 0.8, delay: 0.6*index }}
+                          
+                          key={index}
+                          className={`IG__line IG__line-${index}`}
+                        >
+                          <RxDot /> <p>{textLine}</p>
+                        </motion.span>
+                      )
+                    )}
                   </div>
                 </div>
 

@@ -89,9 +89,9 @@ const BenefitsBlock = () => {
             >
               <div className="slide__content">
                 <div className="content">
-                  <div className="content__title">
+                  {/* <div className="content__title">
                     Собственная база покупателей
-                  </div>
+                  </div> */}
                   {active === 1 && (
                     <>
                       <AnimatePresence>

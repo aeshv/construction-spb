@@ -66,12 +66,13 @@
 
 .slide {
   width: 100%;
+  min-height: 406px;
   max-width: 1280px;
   padding: 20px 30px;
   // background-color: rgba($color: #000000, $alpha: 0.2);
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
 
   &__image {
@@ -159,6 +160,7 @@
 
 @media screen and (max-width: 920px) {
 
+
   .BenefitsBlock {
     & .title {
       width: 100%;
@@ -194,7 +196,7 @@
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 40px;
 
     &__image {
@@ -221,7 +223,7 @@
   }
 
   .gold {
-    padding: 10px 16px;
+    padding: 14px 16px;
   }
 }
 
@@ -229,8 +231,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
-  gap: 40px;
+  justify-content: space-between;
+  // gap: 40px;
+  min-height: 100%;
+  height: 100%;
+  max-width: 560px;
 
   &__title {
     font-family: "Roboto";
@@ -244,7 +249,7 @@
 
   &__list {
     height: 100%;
-    max-height: 200px;
+    // max-height: 200px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -255,7 +260,7 @@
 
   &__item {
     font-family: "Roboto";
-    font-size: 18px;
+    font-size: 24px;
     line-height: 22px;
     color: #424242;
     margin-left: 25px;
@@ -290,6 +295,8 @@
   }
 
   &__control {
+    width: 100%;
+    margin-top: 16px;
     display: flex;
     flex-direction: row;
     align-items: center;

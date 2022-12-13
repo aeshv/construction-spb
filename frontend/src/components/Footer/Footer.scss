@@ -1,202 +1,241 @@
 .footer {
+  width: 100%;
+
+  &__wrapper {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    &__wrapper {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
+  &__top {
+    width: 100%;
+  }
 
-    &__top {
-        width: 100%;
-    }
-
-    &__bottom {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-    }
+  &__bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
 .ft {
-    min-height: 620px;
-    background: linear-gradient(96.79deg, rgba(98, 73, 28, 0.4) 44.68%, rgba(49, 32, 2, 0) 85.21%), url('https://sun2-9.userapi.com/impg/Lh_XGjJtjrhunNrVlUb264lpMVQuRRCh35STAQ/xdlmMiFGYtY.jpg?size=1280x720&quality=95&sign=2bc0213fb96840c58d4147d676e02e9c&type=album');
-    padding: 24px 16px;
+  min-height: 620px;
+  background: linear-gradient(
+      96.79deg,
+      rgba(98, 73, 28, 0.5) 44.68%,
+      rgba(49, 32, 2, 0.1) 85.21%
+    ),
+    url("../../assets/ftbgsd.webp");
+    background-repeat: no-repeat;
+    // background-position: right;
+    background-size: cover;
+    
+  padding: 36px 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  &__row {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  &_contact {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  &__text {
+    font-family: "Roboto";
+    font-size: 3rem;
+    line-height: 47px;
+    font-weight: 300;
+    line-height: 120%;
+    // max-width: 745px;
+    color: #ffffff;
+    // backdrop-filter: drop-shadow(2px 4px 6px black);
+
+    & s {
+      position: relative;
+      font-weight: 300;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: radial-gradient(
+          circle,
+          #e2b361 20%,
+          #cfa55b 100%
+        );
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        margin-bottom: -1px;
+      }
+    }
+
+    & b {
+      font-weight: 400;
+    }
+  }
+
+  &__control {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    height: 100%;
 
-    &__row {
-        width: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
+    & form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+      gap: 16px;
+    }
+  }
+
+  &__error {
+    font-family: "Roboto";
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 100;
+    position: absolute;
+    bottom: 16px;
+    right: 1rem;
+    color: #e26464;
+  }
+
+  &__input {
+    background: #ffffff;
+    box-shadow: 0px 4px 20px rgba(66, 66, 66, 0.3);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 25px 40px;
+  }
+
+  &__send {
+    padding: 15px 25px;
+    background: #cfa55b;
+    box-shadow: 0px 4px 60px rgba(255, 194, 86, 0.4);
+    border-radius: 10px;
+    font-family: "Roboto";
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    width: fit-content;
+    height: fit-content;
+    transition: all 0.2s;
+    border: 1px solid rgba(255, 194, 86, 0);
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid rgba(255, 194, 86, 0.8);
+      box-shadow: 0 4px 80px rgba(255, 194, 86, 0.6);
     }
 
-    &_contact {
-        width: 75%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
+    &:active {
+      border: 1px solid rgba(245, 183, 76, 0.8);
+      box-shadow: 0 4px 80px rgba(255, 201, 107, 0.6);
+      background: #af8a4a;
     }
-
-    &__text {
-        font-family: 'Roboto';
-        font-size: 18px;
-        line-height: 22px;
-        max-width: 650px;
-        color: #FFFFFF;
-        backdrop-filter: drop-shadow(2px 4px 6px black);
-    }
-
-    &__control {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        height: 100%;
-
-        
-        & form {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-around;
-            height: 100%;
-            gap: 16px;
-
-        }
-    }
-
-    &__error {
-        font-family: 'Roboto';
-        font-size: 18px;
-        line-height: 22px;
-        font-weight: 100;
-        position: absolute;
-        bottom: 16px;
-        right: 1rem;
-        color: #e26464;
-    }
-
-    &__input {
-        background: #FFFFFF;
-        box-shadow: 0px 4px 20px rgba(66, 66, 66, 0.3);
-        border-radius: 10px;
-        width: 100%;
-        height: 100%;
-        padding: 25px 40px;
-
-        
-    }
-
-    &__send {
-        padding: 15px 25px;
-        background: #CFA55B;
-        box-shadow: 0px 4px 60px rgba(255, 194, 86, 0.4);
-        border-radius: 10px;
-        font-family: 'Roboto';
-        font-size: 18px;
-        line-height: 22px;
-        color: #FFFFFF;
-        width: fit-content;
-        height: fit-content;
-        transition: all 0.2s;
-        border: 1px solid rgba(255, 194, 86, 0.0);
-        cursor: pointer;
-
-        &:hover {
-            border: 1px solid rgba(255, 194, 86, 0.8);
-            box-shadow: 0 4px 80px rgba(255, 194, 86, 0.6);
-            
-        }
-
-        &:active {
-            border: 1px solid rgba(245, 183, 76, 0.8);
-            box-shadow: 0 4px 80px rgba(255, 201, 107, 0.6);
-            background: #af8a4a;
-        }
-    }
-
-
+  }
 }
 
 .fb {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 120px;
+  background-color: white;
+
+  &__map {
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    height: 120px;
-    background-color: white;
+    justify-content: flex-start;
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 17px;
+    color: #424242;
+    width: 50%;
+  }
 
-
-    &__map {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        font-family: 'Roboto';
-        font-size: 14px;
-        line-height: 17px;
-        color: #424242;
-        width: 50%;
-    }
-
-    &__phone {
-        font-family: 'Roboto';
-        font-size: 24px;
-        line-height: 29px;
-        text-transform: uppercase;
-        width: 50%;
-        color: #424242;
-    }
+  &__phone {
+    font-family: "Roboto";
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    width: 50%;
+    color: #424242;
+  }
 }
 
 @media screen and (max-width: 920px) {
-    .ft {
-        width: 100%;
-        padding: 21px 12px 36px;
+  .ft {
+    width: 100%;
+    padding: 21px 12px 36px;
 
-        &__text {
-            text-align: center;
-        }
+    &__text {
+      text-align: center;
+      line-height: 110%;
+      font-size: 2rem;
 
-        &_contact {
-            width: 100%;
-        }
+      & b {
+        font-weight: 400;
+      }
 
-        &__control {
-            width: 100%;
-            & form {
-
-            }
-        }
-
-        &__error {
-            font-size: 12px;
-            opacity: 0.8;
-            bottom: 5px;
-        }
-
-        &__input {
-            &.big {
-                min-height: 140px;
-            }
-        }
+      & s {
+        &::after {
+            display: none;
+          }
+      }
     }
+
+    &_contact {
+      width: 100%;
+    }
+
+    &__control {
+      width: 100%;
+      & form {
+      }
+    }
+
+    &__error {
+      font-size: 12px;
+      opacity: 0.8;
+      bottom: 5px;
+    }
+
+    &__input {
+      &.big {
+        min-height: 140px;
+      }
+    }
+  }
 }
