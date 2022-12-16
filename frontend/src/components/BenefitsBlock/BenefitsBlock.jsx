@@ -89,9 +89,9 @@ const BenefitsBlock = () => {
             >
               <div className="slide__content">
                 <div className="content">
-                  <div className="content__title">
+                  {/* <div className="content__title">
                     Собственная база покупателей
-                  </div>
+                  </div> */}
                   {active === 1 && (
                     <>
                       <AnimatePresence>
@@ -104,20 +104,14 @@ const BenefitsBlock = () => {
                         >
                           <li className="content__item">
                             <span>
-                              <b>Создаем спрос</b> на объект еще до размещения
-                              его в рекламе
+                              <b>Строим</b> по вашему проекту или предложим свой
                             </span>
                           </li>
                           <li className="content__item">
-                            <span>
-                              Используем <b>закрытые базы</b> риэлторов
-                            </span>
+                            <span>Широкий спектр работ под ключ</span>
                           </li>
                           <li className="content__item">
-                            <span>
-                              Продаем через собственную наработанную базу из{" "}
-                              <b>6000</b>
-                            </span>
+                            <span>Выгодное предложение на комплекс</span>
                           </li>
                         </motion.ul>
                       </AnimatePresence>
@@ -135,19 +129,18 @@ const BenefitsBlock = () => {
                         >
                           <li className="content__item">
                             <span>
-                              <b>Создаем спрос</b> на объект еще до размещения
-                              его в рекламе
+                              Современная комплексная застройка для комфортного
+                              проживания за городом
                             </span>
                           </li>
                           <li className="content__item">
                             <span>
-                              Используем <b>закрытые базы</b> риэлторов
+                              <b>Строим </b>только из качественных материалов
                             </span>
                           </li>
                           <li className="content__item">
                             <span>
-                              Продаем через собственную наработанную базу из{" "}
-                              <b>6000</b>
+                              Индивидуальный подход к каждому заказчику
                             </span>
                           </li>
                         </motion.ul>
@@ -165,20 +158,14 @@ const BenefitsBlock = () => {
                           transition={{ duration: 0.5 }}
                         >
                           <li className="content__item">
-                            <span>
-                              <b>Создаем спрос</b> на объект еще до размещения
-                              его в рекламе
-                            </span>
+                            <span>Контроль качества на объекте</span>
+                          </li>
+                          <li className="content__item">
+                            <span>Оригинальные дома и интерьерные решения</span>
                           </li>
                           <li className="content__item">
                             <span>
-                              Используем <b>закрытые базы</b> риэлторов
-                            </span>
-                          </li>
-                          <li className="content__item">
-                            <span>
-                              Продаем через собственную наработанную базу из{" "}
-                              <b>6000</b>
+                              <b>Строим </b> по смете
                             </span>
                           </li>
                         </motion.ul>

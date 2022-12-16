@@ -12,15 +12,15 @@ const Header = () => {
       <header className="header">
         <div className="header-top">
           <div className="header__social">
-            <div className="header__social--item">
+            <a className="header__social--item" href="https://api.whatsapp.com/send?phone=89117990220" onClick={()=>callYM("header-WA")}>
               <AiOutlineWhatsApp />
-            </div>
-            <div className="header__social--item">
+            </a>
+            {/* <a className="header__social--item">
               <RiTelegramLine />
-            </div>
-            <div className="header__social--item">
+            </a> */}
+            <a className="header__social--item" onClick={()=>callYM("header-VK")}>
               <SlSocialVkontakte />
-            </div>
+            </a>
           </div>
 
           <div className="header__contacts">
@@ -35,13 +35,13 @@ const Header = () => {
             </a>
             <a
               className="contacts__number"
-              href="tel:+79099595521"
+              href="tel:+79117990220"
               onClick={() => {
                 callYM("header-phone");
               }}
             >
               <span>Санкт-Петербург</span>
-              <a>+7 (909) 959-55-21</a>
+              <a>+7 (911) 799-02-20</a>
             </a>
             <a
               href="#contact"
